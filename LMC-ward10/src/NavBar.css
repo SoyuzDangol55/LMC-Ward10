@@ -49,24 +49,21 @@
     gap: 25px;
     margin: 0;
     padding: 0;
-    position: relative;
 }
 
 .maindiv ul li a {
     text-decoration: none;
     color: black;
     font-weight: 500;
-    transition: color 0.3s ease;
-    position: relative;
-    z-index: 1;
-    padding: 10px;
-    display: inline-block;
+    transition: 0.3s ease;
 }
 
-.maindiv ul li a.active {
-    color: white;
+.maindiv ul li a:hover {
+    background-color:rgb(107, 3, 3);
+    color:white;
+    padding:10px;
+    border-radius:10px;
 }
-
 .secondaryNav{
     background-color: rgb(251, 232, 208);
 }
@@ -77,7 +74,7 @@
     gap: 25px;
     margin: 0px 40px 0px 0px;
     padding: 10px;
-    position: relative;
+
 }
 
 
@@ -85,35 +82,18 @@
      text-decoration: none;
      color: black;
     font-weight: 500;
-    position: relative;
-    z-index: 1;
-    transition: color 0.3s ease;
 }
 
 .secondaryNav ul li a.glow{
     color:rgb(255, 237, 237);
 }
 
-.secondaryNav ul li a.active{
+.secondaryNav ul li a:hover{
     color:red;
 }
 
 .secondaryNav ul li a.glow:hover{
    color:white;
-}
-
-/* Sliding highlight bar - follows hover, stays until next hover */
-.nav-highlight-wrapper {
-    position: relative;
-}
-
-.nav-highlight {
-    position: absolute;
-    background-color: rgb(107, 3, 3);
-    border-radius: 10px;
-    transition: left 0.25s ease, top 0.25s ease, width 0.25s ease, height 0.25s ease, opacity 0.2s ease;
-    z-index: 0;
-    pointer-events: none;
 }
 
 
@@ -134,7 +114,7 @@
     }
 }
 
-/* Hamburger button */
+/* Hamburger button - added, nothing existing changed */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -144,7 +124,6 @@
     background: none;
     border: none;
     cursor: pointer;
-    flex-shrink: 0;
 }
 
 .hamburger span {
@@ -154,7 +133,7 @@
     background-color: black;
 }
 
-/* Mobile menu overlay - hidden by default */
+/* Mobile menu overlay */
 .mobile-menu {
     display: none;
     position: fixed;
@@ -236,17 +215,8 @@
     animation: bounce 1s infinite;
 }
 
-/* Tablet and Mobile Responsive */
+/* Show hamburger, hide desktop nav on tablet/mobile */
 @media (max-width: 900px) {
-
-    .top-secondary {
-        display: none;
-    }
-
-    .maindiv {
-        flex-wrap: nowrap;
-        padding: 15px 20px;
-    }
 
     .hamburger {
         display: flex;
@@ -256,22 +226,5 @@
     .maindiv ul,
     .secondaryNav ul {
         display: none;
-    }
-}
-
-/* Mobile Screen */
-@media (max-width: 600px) {
-
-    .logo {
-        width: 60px;
-        height: 60px;
-    }
-
-    .manage-logo p {
-        font-size: 12px;
-    }
-
-    .mobile-nav-grid {
-        grid-template-columns: 1fr;
     }
 }
