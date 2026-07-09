@@ -49,19 +49,26 @@
     gap: 25px;
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
 .maindiv ul li a {
     text-decoration: none;
     color: black;
     font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+    z-index: 1;
+    padding: 10px;
+    display: inline-block;
 }
 
-.maindiv ul li a:hover {
-    background-color:rgb(107, 3, 3);
-    color:white;
-    padding:10px;
-    border-radius:10px;
+.maindiv ul li a.active {
+    color: white;
+}
+
+.secondaryNav{
+    background-color: rgb(251, 232, 208);
 }
 .secondaryNav ul{
      display: flex;
@@ -70,17 +77,201 @@
     gap: 25px;
     margin: 0px 40px 0px 0px;
     padding: 10px;
-
+    position: relative;
 }
+
 
 .secondaryNav ul li a{
      text-decoration: none;
-    color: black;
+     color: black;
     font-weight: 500;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease;
 }
 
-.secondaryNav ul li a:hover {
-    color:rgb(107, 3, 3);
+.secondaryNav ul li a.glow{
+    color:rgb(255, 237, 237);
+}
+
+.secondaryNav ul li a.active{
+    color:red;
+}
+
+.secondaryNav ul li a.glow:hover{
+   color:white;
+}
+
+/* Sliding highlight bar - follows hover, stays until next hover */
+.nav-highlight-wrapper {
+    position: relative;
+}
+
+.nav-highlight {
+    position: absolute;
+    background-color: rgb(107, 3, 3);
+    border-radius: 10px;
+    transition: left 0.25s ease, top 0.25s ease, width 0.25s ease, height 0.25s ease, opacity 0.2s ease;
+    z-index: 0;
+    pointer-events: none;
 }
 
 
+.glow {
+    display: inline-block;
+    padding:5px 8px 5px 8px;
+    background: #ff1d1d;
+    border-radius: 8px;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Hamburger button */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: black;
+}
+
+/* Mobile menu overlay - hidden by default */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 2000;
+    overflow-y: auto;
+    flex-direction: column;
+}
+
+.mobile-menu.open {
+    display: flex;
+}
+
+.mobile-menu-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.mobile-menu-header .logo {
+    width: 60px;
+    height: 60px;
+}
+
+.mobile-menu-text p {
+    margin: 2px 0;
+    font-size: 13px;
+    color: #333;
+}
+
+.close-btn {
+    margin-left: auto;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: black;
+}
+
+.mobile-nav-grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 30px;
+    padding: 25px 20px;
+    margin: 0;
+}
+
+.mobile-nav-grid li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    display: block;
+}
+
+.mobile-nav-grid li a.pill {
+    background-color: rgb(107, 3, 3);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.mobile-glow {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    background: #ff1d1d;
+    margin: 10px 20px 30px 20px;
+    padding: 14px;
+    border-radius: 30px;
+    animation: bounce 1s infinite;
+}
+
+/* Tablet and Mobile Responsive */
+@media (max-width: 900px) {
+
+    .top-secondary {
+        display: none;
+    }
+
+    .maindiv {
+        flex-wrap: nowrap;
+        padding: 15px 20px;
+    }
+
+    .hamburger {
+        display: flex;
+        margin-left: auto;
+    }
+
+    .maindiv ul,
+    .secondaryNav ul {
+        display: none;
+    }
+}
+
+/* Mobile Screen */
+@media (max-width: 600px) {
+
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .manage-logo p {
+        font-size: 12px;
+    }
+
+    .mobile-nav-grid {
+        grid-template-columns: 1fr;
+    }
+}
