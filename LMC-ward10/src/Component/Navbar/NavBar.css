@@ -2,6 +2,7 @@
     margin:0px;
     padding:0px;
 }
+
 .top{
  background: linear-gradient(to right, #240b36, #c31432);
  color:white;
@@ -25,6 +26,8 @@
     align-items: center;
     padding: 15px 40px;
     background-color: white;
+   
+    
 }
 
 .manage-logo {
