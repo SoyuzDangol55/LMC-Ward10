@@ -1,41 +1,42 @@
-import { useEffect, useState } from "react";
-import { getSliders } from "../../services/api";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/effect-fade";
+
+import { Autoplay, EffectFade } from "swiper/modules";
+
+import image1 from "../../assets/wardhouse.png";
+import image2 from "../../assets/ear.jpg";
+import image3 from "../../assets/roadsideimg.jpeg";
+
+
+import './Hero.css'
 
 function Hero() {
-  const [sliders, setSliders] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    async function loadSliders() {
-      try {
-        const data = await getSliders();
-        
-        setSliders(data);
-      } catch (error) {
-        console.error(error);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    loadSliders();
-  }, []);
-
-  if (loading) {
-    return <h2>Loading...</h2>;
-  }
-
   return (
-    <section>
-      <h1>Hero Section</h1>
+<Swiper
+  modules={[Autoplay, EffectFade]}
+  effect="fade"
+  fadeEffect={{ crossFade: true }}
+  loop={false}
+  autoplay={{
+    delay: 4000,
+    disableOnInteraction: false,
+  }}
+  speed={1200}
+>
+      <SwiperSlide>
+        <img src={image1} alt="Ward" />
+      </SwiperSlide>
 
-      {sliders.map((slider) => (
-        <div key={slider.id}>
-          <h2>{slider.title}</h2>
-          <p>{slider.description}</p>
-        </div>
-      ))}
-    </section>
+      <SwiperSlide>
+        <img src={image2} alt="Ward" />
+      </SwiperSlide>
+
+      <SwiperSlide>
+        <img src={image3} alt="Ward" />
+      </SwiperSlide>
+    </Swiper>
   );
 }
 
