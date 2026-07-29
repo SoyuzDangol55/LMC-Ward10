@@ -4,4 +4,14 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+
+  server: {
+    proxy: {
+      "/api": {
+        target: "https://ward10.lmc.gov.np",
+        changeOrigin: true,
+        secure: true,
+      },
+    },
+  },
 })
