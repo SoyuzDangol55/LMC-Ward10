@@ -1,15 +1,141 @@
-.swiper {
-  width: 100%;
-  height: 600px;
+.hero{
+    position:relative;
+    width:100%;
+    height:700px;
+    overflow:hidden;
 }
 
-.swiper-slide {
-  overflow: hidden;
+/* Swiper */
+
+.hero-swiper{
+    width:100%;
+    height:100%;
 }
 
-.swiper-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+.hero-swiper img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* Dark Overlay */
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    z-index:5;
+}
+
+/* Text */
+
+.hero-text{
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    z-index:10;
+
+    color:white;
+
+    text-align:center;
+
+    width:90%;
+}
+
+.hero-text h1{
+    font-size:3.5rem;
+    margin-bottom:15px;
+    font-weight:bold;
+}
+
+.hero-text h2{
+    font-size:2rem;
+    margin-bottom:20px;
+    font-weight:500;
+}
+
+.hero-text p{
+    font-size:1.3rem;
+    margin:10px 0;
+    letter-spacing:1px;
+}
+
+.hero-text button{
+    margin-top:35px;
+
+    padding:14px 35px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#c31432;
+
+    color:white;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.hero-text button:hover{
+    background:#921327;
+    transform:translateY(-3px);
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.hero{
+    height:500px;
+}
+
+.hero-text h1{
+    font-size:2rem;
+}
+
+.hero-text h2{
+    font-size:1.3rem;
+}
+
+.hero-text p{
+    font-size:1rem;
+}
+
+.hero-text button{
+    padding:12px 28px;
+}
+
+}
+
+@media(max-width:600px){
+
+.hero{
+    height:420px;
+}
+
+.hero-text h1{
+    font-size:1.5rem;
+}
+
+.hero-text h2{
+    font-size:1rem;
+}
+
+.hero-text p{
+    font-size:.9rem;
+}
+
+.hero-text button{
+    font-size:15px;
+    padding:10px 24px;
+}
+
 }

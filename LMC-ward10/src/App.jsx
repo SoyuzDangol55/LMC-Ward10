@@ -7,8 +7,6 @@ function App() {
     <>
      <NavBar/>
      <Hero/>
-      <Hero/>
-       <Hero/>
     </>
   )
 }

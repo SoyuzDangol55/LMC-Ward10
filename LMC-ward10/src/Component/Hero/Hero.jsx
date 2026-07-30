@@ -9,34 +9,56 @@ import image1 from "../../assets/wardhouse.png";
 import image2 from "../../assets/ear.jpg";
 import image3 from "../../assets/roadsideimg.jpeg";
 
-
-import './Hero.css'
+import "./Hero.css";
 
 function Hero() {
   return (
-<Swiper
-  modules={[Autoplay, EffectFade]}
-  effect="fade"
-  fadeEffect={{ crossFade: true }}
-  loop={false}
-  autoplay={{
-    delay: 4000,
-    disableOnInteraction: false,
-  }}
-  speed={1200}
->
-      <SwiperSlide>
-        <img src={image1} alt="Ward" />
-      </SwiperSlide>
+    <div className="hero">
 
-      <SwiperSlide>
-        <img src={image2} alt="Ward" />
-      </SwiperSlide>
+      <Swiper
+        className="hero-swiper"
+        modules={[Autoplay, EffectFade]}
+        effect="fade"
+        fadeEffect={{ crossFade: true }}
+        loop={true}
+        speed={1200}
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: false,
+        }}
+      >
+        <SwiperSlide>
+          <img src={image1} alt="Ward 10" />
+        </SwiperSlide>
 
-      <SwiperSlide>
-        <img src={image3} alt="Ward" />
-      </SwiperSlide>
-    </Swiper>
+        <SwiperSlide>
+          <img src={image2} alt="Ward 10" />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <img src={image3} alt="Ward 10" />
+        </SwiperSlide>
+      </Swiper>
+
+      <div className="overlay"></div>
+
+      <div className="hero-text">
+        <h1>ललितपुर महानगरपालिका - वडा नं. १०</h1>
+
+        <h2>Lalitpur Metropolitan City - Ward No. 10</h2>
+
+        <p>
+          सेवा, पारदर्शिता र समृद्धि
+        </p>
+
+        <p>
+          Service, Transparency and Prosperity
+        </p>
+
+        <button>Learn More</button>
+      </div>
+
+    </div>
   );
 }
 

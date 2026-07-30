@@ -8,16 +8,16 @@ function NavBar(){
     <nav className="Nav-Bar">
 
     <div className='top'>
-    <p className="Heading">📞 01 - ⁇ 02 ⁇ 1 · ✉ ward10@lmc.gov.np </p>
-    <p>Lalitpur Metropolitan · Vada no. 10</p>
+    <p className="Heading">📞 ०१ - ५९०२५१६ · ✉ ward10@lmc.gov.np</p>
+    <p>ललितपुर महानगरपालिका · वडा नं. १०</p>
     </div>
 
     <div className='maindiv'>
     <div className='manage-logo'>
     <img src={logo} alt="Ward-10Logo" className='logo'/>
-    <p><b>Lalitpur metropolis</b> <br />
-    10 no. Wada office <br />
-    Jamegal, kupondole, Lalitpur Bagmati Pradesh, Nepal</p>
+    <p><b>ललितपुर महानगरपालिका</b> <br />
+   १० नं. वडा कार्यालय <br />
+    ज्वागल, कोपुण्डोल, ललितपुर बागमती प्रदेश, नेपाल</p>
     </div>
 
     <button className='hamburger' onClick={() => setMenuOpen(true)} aria-label="Open navigation">
@@ -27,14 +27,14 @@ function NavBar(){
     </button>
 
      <ul>
-        <li><a href="">HomePage</a></li>
-        <li><a href="">About-Us</a></li>
-        <li><a href="">Staff</a></li>
-        <li><a href="">Physician</a></li>
-        <li><a href="">Information</a></li>
-        <li><a href="">News</a></li>
-        <li><a href="">Program</a></li>
-        <li><a href="">Location</a></li>
+        <li><a href="">गृहपृष्ठ</a></li> 
+        <li><a href="">हाम्रो बारेमा</a></li>
+        <li><a href="">कर्मचारी</a></li>
+        <li><a href="">चिकित्सक</a></li>
+        <li><a href="">सूचना</a></li>
+        <li><a href="">समाचार</a></li>
+        <li><a href="">कार्यक्रम</a></li>
+        <li><a href="">स्थानहरू</a></li>
      </ul>
      </div>
      <hr />
@@ -42,15 +42,15 @@ function NavBar(){
 
     <nav className='secondaryNav'>
     <ul>
-     <li><a href="">Business</a></li>
-     <li><a href="">Article</a></li>
-     <li><a href="">Gallery</a></li>
-     <li><a href="">Publication</a></li>
-     <li><a href="">Holiday</a></li>
-     <li><a href="">Lab-Report</a></li>
-     <li><a href="">Complaint</a></li>
-     <li><a href="">Event-Registration</a></li>
-     <li><a href="" className='glow'>Online Application</a></li>
+     <li><a href="">व्यवसाय</a></li>
+     <li><a href="">लेख</a></li>
+     <li><a href="">ग्यालरी</a></li>
+     <li><a href="">प्रकाशन</a></li>
+     <li><a href="">बिदा</a></li>
+     <li><a href="">ल्याब रिपोर्ट</a></li>
+     <li><a href="">गुनासो</a></li>
+     <li><a href="">घटना दर्ता</a></li>
+     <li><a href="" className='glow'>अनलाइन आवेदन</a></li>
      </ul>
     </nav>
 
