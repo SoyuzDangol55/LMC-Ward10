@@ -55,7 +55,8 @@ function Hero() {
           Service, Transparency and Prosperity
         </p>
 
-        <button>Learn More</button>
+       <button className="btn1"><a href="">ताजा सूचना हेर्नुहोस्</a></button>
+       <button className="btn2"><a href="">गुनासो दर्ता गर्नुहोस्</a></button>
       </div>
 
     </div>
