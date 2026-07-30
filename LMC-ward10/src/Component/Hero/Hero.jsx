@@ -13,6 +13,7 @@ import "./Hero.css";
 
 function Hero() {
   return (
+    <>
     <div className="hero">
 
       <Swiper
@@ -60,6 +61,7 @@ function Hero() {
       </div>
 
     </div>
+  </>
   );
 }
 
