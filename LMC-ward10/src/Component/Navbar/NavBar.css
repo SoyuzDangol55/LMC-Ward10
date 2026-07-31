@@ -116,6 +116,19 @@
     }
 }
 
+.Nav-Bar {
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+    background-color: white; /* so content doesn't show through while scrolling */
+}
+
+.secondaryNav {
+    position: sticky;
+    top: 150px; /* height of .Nav-Bar (top + maindiv + hr) — adjust to match your actual height */
+    z-index: 1000;
+}
+
 /* Hamburger button - added, nothing existing changed */
 .hamburger {
     display: none;
