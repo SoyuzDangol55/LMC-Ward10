@@ -65,11 +65,11 @@ return (
             {notices.slice(0,4).map((notice) => (
 
                 <div className="newnews-card" key={notice.id}>
-
+                    <a href="">
                     <h3>{notice.title}</h3>
 
                     <p>{notice.publicationDate}</p>
-
+                </a>
                 </div>
 
             ))}
@@ -87,14 +87,15 @@ return (
 
 
             {news.slice(0,4).map((item) => (
-
+                <a href="">
                 <div className="news-card" key={item.id}>
 
                     <h3>{item.title}</h3>
 
                     <p>{item.publicationDate}</p>
-
+                
                 </div>
+                </a>
 
             ))}
 
