@@ -5,6 +5,7 @@ import FaNewspaper from "../../assets/FaNewspaper.png";
 import FaStore from "../../assets/FaStore.png";
 import FaMapMarkerAlt from "../../assets/FaMapMarkerAlt.png";
 import FaCommentDots from "../../assets/FaCommentDots.png";
+import './Quickservice.css'
 function Quickservice() {
 
     const servies = [
