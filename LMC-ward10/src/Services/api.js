@@ -1,13 +1,33 @@
-// const BASE_URL = "https://ward10.lmc.gov.np/api";
+const BASE_URL = "/api";
 
-// export async function getSliders() {
-//   const response = await fetch("/api/slider");
+//ताजा सूचना
+export async function getNotice() {
 
-//   if (!response.ok) {
-//     throw new Error("Failed to fetch sliders");
-//   }
+    const response = await fetch(
+        `${BASE_URL}/notice?page=1&pageSize=50&status=active`
+    );
 
-//   const result = await response.json();
+    if (!response.ok) {
+        throw new Error("Failed to fetch notices");
+    }
 
-//   return result.data;
-// }
+    const result = await response.json();
+
+    return result.data;
+}
+
+//समाचार
+
+export async function getNews(){
+  const response = await fetch(`${BASE_URL}/newsArticle`);
+
+  if(!response.ok){
+    throw new Eroor("Failed To fetch news");
+  }
+
+  const result = await response.json();
+
+  return result.data;
+
+}
+
