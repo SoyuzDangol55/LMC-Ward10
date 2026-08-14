@@ -1,0 +1,94 @@
+.main-div {
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  padding: 120px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  background-color: #f5f6fa;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.Staff-category,
+.Location-category,
+.Business-category {
+  flex: 1;
+  min-width: 360px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.Staff-category:hover,
+.Location-category:hover,
+.Business-category:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.Staff-category h5,
+.Location-category h5,
+.Business-category h5 {
+  margin: 0 0 12px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2d2d2d;
+}
+
+.Staff-category a,
+.Location-category a,
+.Business-category a {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 13px;
+  color: #4a6cf7;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.Staff-category a:hover,
+.Location-category a:hover,
+.Business-category a:hover {
+  text-decoration: underline;
+}
+
+.Staff-category p,
+.Location-category p,
+.Business-category p {
+  display: inline-block;
+  margin: 8px 0;
+  font-size: 14.5px;
+  color: #444;
+  width: 78%;
+}
+
+.Staff-category span,
+.Location-category span,
+.Business-category span {
+  display: inline-block;
+  float: right;
+  background: #eef1ff;
+  color: #4a6cf7;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 999px;
+  margin: 6px 0;
+}
+
+/* Each p+span pair sits on its own row */
+.Staff-category p,
+.Location-category p,
+.Business-category p {
+  clear: both;
+}
+
+@media (max-width: 768px) {
+  .main-div {
+    flex-direction: column;
+  }
+}
