@@ -12,7 +12,7 @@
 }
 
 .quick-services > div:first-child p{
-    color: #ff9800;
+    color: red;
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 8px;
@@ -30,7 +30,6 @@
     border-radius: 20px;
     padding: 30px;
     box-shadow: 0 10px 30px rgba(0,0,0,.08);
-
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 30px;

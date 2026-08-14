@@ -87,15 +87,15 @@ return (
 
 
             {news.slice(0,4).map((item) => (
-                <a href="">
+                
                 <div className="news-card" key={item.id}>
-
+                    <a href="">
                     <h3>{item.title}</h3>
 
                     <p>{item.publicationDate}</p>
-                
+                    </a>
                 </div>
-                </a>
+                
 
             ))}
 

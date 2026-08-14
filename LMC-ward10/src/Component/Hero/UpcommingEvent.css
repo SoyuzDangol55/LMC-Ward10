@@ -5,13 +5,13 @@
 .quick-upcommingevent {
     width: 100%;
     background: #f5f6fa;
-    padding: 28px 24px 42px;
+     padding: 20px 60px 40px;
     box-sizing: border-box;
 }
 
 .quick-upcommingevent .main-div {
     width: 100%;
-    max-width: 1305px;
+    max-width: 1800px;
     margin: 0 auto;
 }
 
@@ -53,7 +53,7 @@
 .upcomming-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+    gap: 26px;
 }
 
 

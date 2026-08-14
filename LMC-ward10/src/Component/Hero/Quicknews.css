@@ -1,8 +1,8 @@
 .quick-news {
-    width: 92%;
+    width: 95%;
     display: flex;
     gap: 30px;
-    padding: 40px 60px;
+     padding: 60px 60px 40px;
     background-color: #f5f6fa;
 }
 
@@ -12,7 +12,7 @@
 .news-container {
     flex: 1;
     background: white;
-    padding: 25px;
+   padding: 40px 25px 25px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
@@ -26,15 +26,18 @@
 .news-container h2 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #1d4ed8;
-    border-bottom: 2px solid #1d4ed8;
+    border-bottom: 2px solid red;
     padding-bottom: 10px;
 
 }
 
 
 /* Cards */
-.newnews-card,
+.newnews-card{
+    padding: 15px 0;
+    border-bottom: 2px solid #ddd;
+}
+
 .news-card {
     padding: 15px 0;
     border-bottom: 2px solid #ddd;
