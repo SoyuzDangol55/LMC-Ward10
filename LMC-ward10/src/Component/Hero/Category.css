@@ -69,7 +69,6 @@
 .Staff-category span,
 .Location-category span,
 .Business-category span {
-  display: inline-block;
   float: right;
   background: #eef1ff;
   color: #4a6cf7;

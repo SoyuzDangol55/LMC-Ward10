@@ -31,3 +31,16 @@ export async function getNews(){
 
 }
 
+
+//upcomming event
+export async function getUpcommingEvent(){
+const response = await fetch(`${BASE_URL}/event?page=1&pageSize=50`);
+
+if(!response.ok){
+  throw new Error("Failed to fetch Upcomming event");  
+}
+
+const result = await response.json();
+
+return result.data;
+}
