@@ -25,63 +25,44 @@ function UpcommingEvent() {
         <section className="quick-upcommingevent">
             <div className="main-div">
 
-                {/* =========================
-                    HEADING
-                ========================== */}
-                <div className="top-section">
-                    <h2>आगामी कार्यक्रमहरू</h2>
-
+                {/* Header */}
+                <div className="top-section">    
+                        <h2>आगामी कार्यक्रमहरू</h2>
                     <a href="#">
                         सबै →
                     </a>
                 </div>
 
-
-                {/* =========================
-                    EVENT CARDS
-                ========================== */}
+                {/* Cards */}
                 <div className="upcomming-cards">
 
                     {loading ? (
-                        <p className="event-message">
-                            लोड हुँदैछ...
-                        </p>
-                    ) : Events.length === 0 ? (
-                        <p className="event-message">
-                            हाल कुनै आगामी कार्यक्रम छैन
-                        </p>
+                        <p className="loading-text">लोड हुँदैछ...</p>
                     ) : (
-                        Events.map((event, index) => (
-                            <a
-                                href={`/events/${event.id || index}`}
+                        Events.slice(0, 3).map((event, index) => (
+                            <div
                                 className="event-card"
                                 key={event.id || index}
                             >
 
-                                {/* Date */}
                                 <p className="event-date">
                                     {event.startDate}
                                 </p>
 
-
-                                {/* Title */}
                                 <h3>
                                     {event.title}
                                 </h3>
 
-
-                                {/* Description */}
                                 <p className="event-description">
                                     {event.description}
                                 </p>
 
-
-                                {/* Location */}
                                 <p className="event-location">
-                                    📍 {event.location}
+                                    <span>⌖</span>
+                                    {event.location}
                                 </p>
 
-                            </a>
+                            </div>
                         ))
                     )}
 
