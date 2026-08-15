@@ -4,6 +4,7 @@ import NavBar from "./Component/Navbar/NavBar";
 import Quicknews from "./Component/Hero/Quicknews.jsx";
 import Category from "./Component/Hero/Category.jsx";
 import UpcommingEvent from "./Component/Hero/UpcommingEvent.jsx";
+import Footer from "./Component/Hero/Footer.jsx";
 function App() {
 
   return (
@@ -14,6 +15,7 @@ function App() {
      <Quicknews/>
      <Category/>
      <UpcommingEvent/>
+     <Footer/>
     </>
   )
 }

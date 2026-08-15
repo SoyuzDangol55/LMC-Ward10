@@ -1,0 +1,421 @@
+/* ========================================
+   MAIN FOOTER
+======================================== */
+
+.main-section {
+    width: 100%;
+    font-family: "Segoe UI", sans-serif;
+}
+
+
+/* ========================================
+   TOP CTA SECTION
+======================================== */
+
+.top-div {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 42px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #12335f,
+        #1b477d
+    );
+
+    color: white;
+}
+
+
+/* Text */
+
+.words {
+    max-width: 700px;
+}
+
+.words h2 {
+    margin: 0 0 10px;
+
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.words p {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 1.8;
+
+    color: #d9e4f2;
+}
+
+
+/* ========================================
+   CTA BUTTONS
+======================================== */
+
+.btns {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    flex-shrink: 0;
+}
+
+.btns a {
+    display: inline-block;
+
+    padding: 12px 24px;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Complaint button */
+
+.btn1 {
+    background: white;
+    color: #12335f;
+
+    border: 1px solid white;
+}
+
+
+/* Gallery button */
+
+.btn2 {
+    background: transparent;
+    color: white;
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+
+/* Hover */
+
+.btn1:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn2:hover {
+    background: white;
+    color: #12335f;
+
+    transform: translateY(-3px);
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.footer {
+    width: 100%;
+
+    background: #19345f;
+
+    color: white;
+}
+
+
+/* ========================================
+   FOOTER CONTAINER
+======================================== */
+
+.footer-container {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 48px 55px 42px;
+
+    box-sizing: border-box;
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        1fr
+        1fr
+        1.25fr;
+
+    gap: 55px;
+}
+
+
+/* ========================================
+   ABOUT
+======================================== */
+
+.footer-about {
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+}
+
+.footer-about img {
+    width: 60px;
+    height: 60px;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+}
+
+.footer-about h3 {
+    margin: 0 0 3px;
+
+    font-size: 16px;
+}
+
+.footer-about h4 {
+    margin: 0 0 5px;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+
+    font-weight: 600;
+}
+
+.footer-about p {
+    margin: 0;
+
+    font-size: 13px;
+
+    line-height: 1.65;
+
+    color: #d3dced;
+}
+
+
+/* ========================================
+   FOOTER COLUMNS
+======================================== */
+
+.footer-column h3 {
+    margin: 0 0 15px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+}
+
+.footer-column ul {
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 9px;
+}
+
+.footer-column a {
+    color: #cbd5e5;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: all 0.25s ease;
+}
+
+.footer-column a:hover {
+    color: white;
+
+    padding-left: 4px;
+}
+
+
+/* ========================================
+   CONTACT
+======================================== */
+
+.contact p {
+    margin: 0 0 11px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 13px;
+
+    color: #cbd5e5;
+}
+
+.contact span {
+    width: 16px;
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    font-size: 17px;
+
+    color: #f2a900;
+}
+
+
+/* ========================================
+   COPYRIGHT
+======================================== */
+
+.footer-bottom {
+    border-top: 1px solid rgba(
+        255,
+        255,
+        255,
+        0.10
+    );
+
+    text-align: center;
+
+    padding: 14px 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    color: #b8c4d8;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+    .top-div {
+        padding: 40px 5%;
+    }
+
+    .footer-container {
+        grid-template-columns:
+            1.5fr
+            1fr
+            1fr;
+
+        gap: 40px;
+
+        padding: 40px 35px;
+    }
+
+    .footer-about {
+        grid-column: span 3;
+    }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .top-div {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 35px 25px;
+    }
+
+    .words h2 {
+        font-size: 23px;
+    }
+
+    .words p {
+        font-size: 13px;
+    }
+
+    .btns {
+        width: 100%;
+    }
+
+    .btns a {
+        flex: 1;
+
+        text-align: center;
+    }
+
+
+    /* Footer */
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        padding: 35px 25px;
+    }
+
+    .footer-about {
+        grid-column: auto;
+    }
+
+
+    .footer-about img {
+        width: 55px;
+        height: 55px;
+    }
+
+
+    /* Copyright */
+
+    .footer-bottom {
+        padding: 13px 15px;
+    }
+
+    .footer-bottom p {
+        font-size: 11px;
+
+        line-height: 1.5;
+    }
+}
+
+
+/* ========================================
+   VERY SMALL SCREEN
+======================================== */
+
+@media (max-width: 400px) {
+
+    .btns {
+        flex-direction: column;
+    }
+
+    .btns a {
+        width: 100%;
+
+        box-sizing: border-box;
+    }
+}
