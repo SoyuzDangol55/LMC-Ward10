@@ -1,3 +1,4 @@
+import { Routes, Route } from "react-router-dom";
 import Hero from "./Component/Hero/Hero";
 import Quickservice from "./Component/Hero/Quickservice";
 import NavBar from "./Component/Navbar/NavBar";
@@ -5,19 +6,30 @@ import Quicknews from "./Component/Hero/Quicknews.jsx";
 import Category from "./Component/Hero/Category.jsx";
 import UpcommingEvent from "./Component/Hero/UpcommingEvent.jsx";
 import Footer from "./Component/Hero/Footer.jsx";
-function App() {
+import File from "./Component/Aboutus/File.jsx";
 
+function Home() {
   return (
     <>
-     <NavBar/>
-     <Hero/>
-     <Quickservice/>
-     <Quicknews/>
-     <Category/>
-     <UpcommingEvent/>
-     <Footer/>
+      <NavBar/>
+      <Hero/>
+      <Quickservice/>
+      <Quicknews/>
+      <Category/>
+      <UpcommingEvent/>
+      <Footer/>
     </>
-  )
+  );
 }
 
-export default App
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<File />} />
+
+    </Routes>
+  );
+}
+
+export default App;

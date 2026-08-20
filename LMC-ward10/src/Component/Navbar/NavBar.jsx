@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import logo from "../../assets/ward10-logo.png";
+import { Link } from 'react-router-dom';
 import './NavBar.css'
 function NavBar(){
     const [menuOpen, setMenuOpen] = useState(false);
@@ -26,16 +27,16 @@ function NavBar(){
         <span></span>
     </button>
 
-     <ul>
-        <li><a href="">गृहपृष्ठ</a></li> 
-        <li><a href="">हाम्रो बारेमा</a></li>
-        <li><a href="">कर्मचारी</a></li>
-        <li><a href="">चिकित्सक</a></li>
-        <li><a href="">सूचना</a></li>
-        <li><a href="">समाचार</a></li>
-        <li><a href="">कार्यक्रम</a></li>
-        <li><a href="">स्थानहरू</a></li>
-     </ul>
+<ul>
+    <li><Link to="/">गृहपृष्ठ</Link></li>
+    <li><Link to="/about">हाम्रो बारेमा</Link></li>
+    <li><Link to="/staff">कर्मचारी</Link></li>
+    <li><Link to="/physician">चिकित्सक</Link></li>
+    <li><Link to="/notice">सूचना</Link></li>
+    <li><Link to="/news">समाचार</Link></li>
+    <li><Link to="/events">कार्यक्रम</Link></li>
+    <li><Link to="/location">स्थानहरू</Link></li>
+</ul>
      </div>
      <hr />
     </nav>

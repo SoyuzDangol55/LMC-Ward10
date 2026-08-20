@@ -1,0 +1,354 @@
+/* =========================
+   ABOUT US PAGE
+========================= */
+
+.About-us {
+    width: 100%;
+    min-height: 100vh;
+    background: #f7f9fc;
+    padding-bottom: 80px;
+    font-family: "Segoe UI", sans-serif;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   TOP HEADING
+========================= */
+
+.top-heading {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 80px 20px 55px;
+}
+
+.top-heading p:first-child {
+    display: inline-block;
+    margin: 0 0 12px;
+    padding: 7px 18px;
+    border-radius: 30px;
+    background: #e8f1ff;
+    color: red;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.top-heading h1 {
+    margin: 0 0 18px;
+    color: #172033;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.top-heading p:last-child {
+    margin: 0 auto;
+    max-width: 720px;
+    color: #697386;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   ABOUT CARDS
+========================= */
+
+.about-cards {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 80px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.about-card {
+    background: #ffffff;
+    padding: 38px 30px;
+    border-radius: 18px;
+    text-align: center;
+
+    border: 1px solid #e8edf4;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.09);
+}
+
+.about-card img {
+    width: 65px;
+    height: 65px;
+    margin-bottom: 18px;
+
+    filter: invert(36%) sepia(89%) saturate(1150%)
+            hue-rotate(175deg) brightness(88%) contrast(92%);
+}
+
+.about-card h4 {
+    margin: 0 0 12px;
+
+    color: #172033;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.about-card p {
+    margin: 0;
+
+    color: #697386;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   LAST SECTION
+========================= */
+
+.last {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 30px;
+}
+
+
+/* =========================
+   INTRODUCTION
+========================= */
+
+.last > div:first-child {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 18px;
+
+    border: 1px solid #e8edf4;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+.last h5 {
+    margin: 0 0 20px;
+
+    color: #172033;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.last > div:first-child > p:first-of-type {
+    margin: 0;
+
+    color: #626d7d;
+    font-size: 15.5px;
+    line-height: 2;
+    text-align: justify;
+}
+
+
+/* =========================
+   POPULATION / HOUSEHOLD
+========================= */
+
+.last > div:first-child > p:nth-of-type(2),
+.last > div:first-child > p:nth-of-type(3) {
+    display: inline-flex;
+    flex-direction: column;
+
+    width: calc(50% - 10px);
+    box-sizing: border-box;
+
+    margin-top: 30px;
+    padding: 20px;
+
+    background: #f5f8fc;
+    border-radius: 12px;
+
+    color: #1769aa;
+    font-size: 25px;
+    font-weight: 700;
+
+    line-height: 1.5;
+}
+
+.last > div:first-child > p:nth-of-type(2) {
+    margin-right: 15px;
+}
+
+.last > div:first-child > p:nth-of-type(2)::first-line,
+.last > div:first-child > p:nth-of-type(3)::first-line {
+    color: #687386;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   CONTACT / MAP
+========================= */
+
+.map {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 18px;
+
+    border: 1px solid #e8edf4;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+.map h5 {
+    margin-bottom: 25px;
+}
+
+.map p {
+    margin: 0 0 15px;
+
+    color: #626d7d;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   GOOGLE MAP
+========================= */
+
+.map iframe {
+    width: 100%;
+    height: 320px;
+
+    margin-top: 15px;
+
+    border: 0;
+    border-radius: 14px;
+
+    display: block;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .top-heading {
+        padding-top: 60px;
+    }
+
+    .top-heading h1 {
+        font-size: 34px;
+    }
+
+    .about-cards {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+
+    .last {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .About-us {
+        padding-bottom: 50px;
+    }
+
+    .top-heading {
+        padding: 45px 20px 40px;
+    }
+
+    .top-heading p:first-child {
+        font-size: 13px;
+    }
+
+    .top-heading h1 {
+        font-size: 28px;
+    }
+
+    .top-heading p:last-child {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+
+    .about-cards {
+        width: 90%;
+        margin-bottom: 45px;
+        gap: 18px;
+    }
+
+    .about-card {
+        padding: 30px 22px;
+    }
+
+    .about-card img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .about-card h4 {
+        font-size: 19px;
+    }
+
+    .about-card p {
+        font-size: 14px;
+    }
+
+
+    .last {
+        width: 90%;
+        gap: 20px;
+    }
+
+    .last > div:first-child,
+    .map {
+        padding: 25px 20px;
+    }
+
+    .last h5 {
+        font-size: 22px;
+    }
+
+    .last > div:first-child > p:first-of-type {
+        font-size: 14px;
+        line-height: 1.8;
+        text-align: left;
+    }
+
+
+    .last > div:first-child > p:nth-of-type(2),
+    .last > div:first-child > p:nth-of-type(3) {
+        width: 100%;
+        margin: 10px 0 0;
+        font-size: 22px;
+    }
+
+    .map p {
+        font-size: 14px;
+    }
+
+    .map iframe {
+        height: 280px;
+    }
+}
