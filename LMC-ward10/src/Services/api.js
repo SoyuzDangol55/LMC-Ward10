@@ -44,3 +44,31 @@ const result = await response.json();
 
 return result.data;
 }
+
+
+//Employees category
+export async function getEmployeeType(){
+  const response = await fetch(`${BASE_URL}/staff-management/categories`);
+
+  if(!response.ok){
+    throw new Error("Failed to fetch Employee Type");
+  }
+
+  const result = await response.json();
+
+  return result.data;
+}
+
+//employee
+
+export async function getEmployees(){
+  const response = await fetch(`${BASE_URL}/staff-management/staff`);
+
+  if(!response.ok){
+    throw new Error("Failed to fetch Employee");
+  }
+  const result = await response.json();
+
+  return result.data;
+
+}

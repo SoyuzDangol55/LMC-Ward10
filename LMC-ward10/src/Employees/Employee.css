@@ -1,0 +1,219 @@
+/* ==========================================================================
+   Employee.css
+   Ward 10 (Lalitpur Metropolitan City) — Staff & Representatives page
+
+   Design language: rooted in Patan/Newari civic architecture — deep brick
+   red, aged brass, indigo authority tone, warm paper ground. The signature
+   element is the arched photo frame on each employee card, echoing the
+   carved wooden torana windows the ward itself is known for.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap');
+
+:root {
+  --ink: #21281f;
+  --paper: #f3eedd;
+  --paper-raised: #fbf8f0;
+  --brick: #a94430;
+  --brick-deep: #833323;
+  --brass: #b08d3d;
+  --brass-soft: #d9c48d;
+  --indigo: #2b3a55;
+  --line: #d8cfb8;
+
+  --font-display: 'Noto Serif Devanagari', 'Georgia', serif;
+  --font-body: 'Noto Sans Devanagari', 'Segoe UI', sans-serif;
+}
+
+/* ---------- Page intro ---------- */
+
+.top-container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 2.5rem;
+  text-align: center;
+}
+
+.top-container > p:first-child {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brick);
+  margin: 0 0 0.75rem;
+}
+
+.top-container h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: var(--indigo);
+  margin: 0 0 1rem;
+  line-height: 1.25;
+}
+
+.top-container > p:last-child {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: color-mix(in srgb, var(--ink) 75%, transparent);
+  margin: 0;
+}
+
+/* Small brass rule under the intro, evoking a plaque underline */
+.top-container::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 3px;
+  margin: 1.5rem auto 0;
+  background: var(--brass);
+  border-radius: 2px;
+}
+
+/* ---------- Category tabs ---------- */
+
+.category-button {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0 1.5rem 2.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--line);
+}
+
+.category-button button {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: color-mix(in srgb, var(--ink) 65%, transparent);
+  background: transparent;
+  border: none;
+  padding: 0.65rem 1.1rem;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.category-button button::after {
+  content: "";
+  position: absolute;
+  left: 1.1rem;
+  right: 1.1rem;
+  bottom: -1px;
+  height: 2px;
+  background: var(--brick);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.25s ease;
+}
+
+.category-button button:hover {
+  color: var(--brick);
+}
+
+.category-button button:focus-visible {
+  outline: 2px solid var(--indigo);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.category-button button.active {
+  color: var(--brick-deep);
+  font-weight: 600;
+}
+
+.category-button button.active::after {
+  transform: scaleX(1);
+}
+
+/* ---------- Employee grid ---------- */
+
+.employee-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem 1.75rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 5rem;
+}
+
+.employee-card {
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0 1.25rem 1.5rem;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.employee-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -12px color-mix(in srgb, var(--ink) 35%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .employee-card,
+  .category-button button {
+    transition: none;
+  }
+  .employee-card:hover {
+    transform: none;
+  }
+}
+
+/* Circular photo frame, ringed in brass like a temple medallion. */
+.employee-card img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  object-position: center top;
+  margin: 1.5rem auto 1rem;
+  display: block;
+  border: 3px solid var(--brass);
+  border-radius: 50%;
+  background: var(--paper);
+  box-shadow: 0 0 0 4px var(--paper-raised), 0 6px 16px -6px color-mix(in srgb, var(--ink) 40%, transparent);
+}
+
+.employee-card h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--indigo);
+  margin: 0 0 0.3rem;
+}
+
+.employee-card p {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: color-mix(in srgb, var(--ink) 70%, transparent);
+  margin: 0.15rem 0;
+}
+
+.employee-card p:first-of-type {
+  color: var(--brick);
+  font-weight: 500;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 480px) {
+  .top-container {
+    padding: 3rem 1.25rem 2rem;
+  }
+
+  .employee-container {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1.5rem 1rem;
+    padding: 2rem 1.25rem 3.5rem;
+  }
+
+  .employee-card img {
+    width: 110px;
+    height: 110px;
+  }
+}

@@ -7,6 +7,8 @@ import Category from "./Component/Hero/Category.jsx";
 import UpcommingEvent from "./Component/Hero/UpcommingEvent.jsx";
 import Footer from "./Component/Hero/Footer.jsx";
 import File from "./Component/Aboutus/File.jsx";
+import Employee from "./Employees/Employee";
+
 
 function Home() {
   return (
@@ -27,8 +29,10 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<File />} />
-
+      <Route path="/Employee" element={<Employee />} />
+      
     </Routes>
+ 
   );
 }
 
