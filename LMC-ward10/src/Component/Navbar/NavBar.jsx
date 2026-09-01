@@ -31,7 +31,7 @@ function NavBar(){
     <li><Link to="/">गृहपृष्ठ</Link></li>
     <li><Link to="/about">हाम्रो बारेमा</Link></li>
     <li><Link to="/Employee">कर्मचारी</Link></li>
-    <li><Link to="/physician">चिकित्सक</Link></li>
+    <li><Link to="/Activedoctor">चिकित्सक</Link></li>
     <li><Link to="/notice">सूचना</Link></li>
     <li><Link to="/news">समाचार</Link></li>
     <li><Link to="/events">कार्यक्रम</Link></li>
