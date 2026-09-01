@@ -5,7 +5,7 @@ function Footer() {
     return (
         <footer className="main-section">
 
-            {/* ================= TOP CTA SECTION ================= */}
+           
             <div className="top-div">
 
                 <div className="words">
@@ -30,7 +30,7 @@ function Footer() {
             </div>
 
 
-            {/* ================= FOOTER ================= */}
+           
             <div className="footer">
 
                 <div className="footer-container">

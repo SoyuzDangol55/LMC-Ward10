@@ -72,3 +72,17 @@ export async function getEmployees(){
   return result.data;
 
 }
+
+
+
+//Active Doctor
+export async function getActiveDoc(){
+  const response = await fetch(`${BASE_URL}/doctor/active-doctor`);
+
+  if(!response.ok){
+    throw new Error("Failed to fetch Active Doctors");
+  } 
+  const result = await response.json();
+
+  return result.doctorList || [];
+}
