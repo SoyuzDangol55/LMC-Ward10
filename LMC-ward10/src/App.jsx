@@ -8,7 +8,7 @@ import UpcommingEvent from "./Component/Hero/UpcommingEvent.jsx";
 import Footer from "./Component/Hero/Footer.jsx";
 import File from "./Component/Aboutus/File.jsx";
 import Employee from "./Employees/Employee";
-//import Activedoctor from "./Employees/Activedoctor";
+import Activedoctor from "./Employees/Activedoctor";
 
 function Home() {
   return (
@@ -30,9 +30,10 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<File />} />
       <Route path="/Employee" element={<Employee />} />
-      {/* <Route path="/Activedoctor" element={<Activedoctor />} /> */}
+      <Route path="/Activedoctor" element={<Activedoctor />} />
       
     </Routes>
+    
 
   );
 }

@@ -68,22 +68,22 @@ function NavBar(){
         </div>
 
         <ul className='mobile-nav-grid'>
-            <li><a href="" className='pill'>HomePage</a></li>
-            <li><a href="">About-Us</a></li>
-            <li><a href="">Staff</a></li>
-            <li><a href="">Physician</a></li>
-            <li><a href="">Information</a></li>
-            <li><a href="">News</a></li>
-            <li><a href="">Program</a></li>
-            <li><a href="">Location</a></li>
-            <li><a href="">Business</a></li>
-            <li><a href="">Article</a></li>
-            <li><a href="">Gallery</a></li>
-            <li><a href="">Publication</a></li>
-            <li><a href="">Holiday</a></li>
-            <li><a href="">Lab-Report</a></li>
-            <li><a href="">Complaint</a></li>
-            <li><a href="">Event-Registration</a></li>
+            <li><Link to="/" className='pill'>HomePage</Link></li>
+            <li><Link to="/about">About-Us</Link></li>
+            <li><Link to="/Employee">Staff</Link></li>
+            <li><Link to="/Activedoctor">Physician</Link></li>
+            <li><Link to="">Information</Link></li>
+            <li><Link to="">News</Link></li>
+            <li><Link to="">Program</Link></li>
+            <li><Link to="">Location</Link></li>
+            <li><Link to="">Business</Link></li>
+            <li><Link to="">Article</Link></li>
+            <li><Link to="">Gallery</Link></li>
+            <li><Link to="">Publication</Link></li>
+            <li><Link to="">Holiday</Link></li>
+            <li><Link to="">Lab-Report</Link></li>
+            <li><Link to="">Complaint</Link></li>
+            <li><Link to="">Event-Registration</Link></li>
         </ul>
 
         <a href="" className='mobile-glow'>Online Application</a>
