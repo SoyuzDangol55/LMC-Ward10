@@ -22,7 +22,7 @@ export async function getNews(){
   const response = await fetch(`${BASE_URL}/newsArticle`);
 
   if(!response.ok){
-    throw new Eroor("Failed To fetch news");
+    throw new Error("Failed To fetch news");
   }
 
   const result = await response.json();

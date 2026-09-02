@@ -9,6 +9,7 @@ import Footer from "./Component/Hero/Footer.jsx";
 import File from "./Component/Aboutus/File.jsx";
 import Employee from "./Employees/Employee";
 import Activedoctor from "./Employees/Activedoctor";
+import Notice from "./Notice/Notice.jsx"
 
 function Home() {
   return (
@@ -31,9 +32,8 @@ function App() {
       <Route path="/about" element={<File />} />
       <Route path="/Employee" element={<Employee />} />
       <Route path="/Activedoctor" element={<Activedoctor />} />
-      
+      <Route path = "/Notice" element = {<Notice/>} />
     </Routes>
-    
 
   );
 }

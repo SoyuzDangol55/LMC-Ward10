@@ -1,0 +1,184 @@
+/* =========================
+   Notice Header
+========================= */
+
+.Header {
+    text-align: center;
+    padding: 60px 20px 40px;
+    background: #f7f9fc;
+}
+
+.Header p:first-child {
+    color: #2563eb;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.Header h1 {
+    margin: 0 0 12px;
+    font-size: 38px;
+    color: #172033;
+    font-weight: 700;
+}
+
+.Header p:last-child {
+    margin: 0;
+    color: #6b7280;
+    font-size: 16px;
+}
+
+
+/* =========================
+   Cards Container
+========================= */
+
+.cards {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto 80px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+
+/* =========================
+   Individual Notice Card
+========================= */
+
+.notice-card {
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.notice-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================
+   Notice Image
+========================= */
+
+.notice-card img {
+    width: 100%;
+    height: 230px;
+
+    display: block;
+
+    object-fit: contain;
+
+    transition: transform 0.4s ease;
+}
+
+.notice-card:hover img {
+    transform: scale(1.03);
+}
+
+
+/* =========================
+   Notice Content
+========================= */
+
+.notice-card h2 {
+    margin: 20px 20px 10px;
+
+    font-size: 20px;
+    line-height: 1.5;
+
+    color: #172033;
+}
+
+.notice-card p {
+    margin: 0 20px 24px;
+
+    color: #6b7280;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   Loading
+========================= */
+
+.cards + p,
+p {
+    font-family: inherit;
+}
+
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 900px) {
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+    }
+
+    .Header {
+        padding: 50px 20px 35px;
+    }
+
+    .Header h1 {
+        font-size: 32px;
+    }
+
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 600px) {
+
+    .cards {
+        width: 92%;
+        grid-template-columns: 1fr;
+        gap: 20px;
+
+        margin-top: 30px;
+    }
+
+    .Header {
+        padding: 40px 15px 30px;
+    }
+
+    .Header h1 {
+        font-size: 28px;
+    }
+
+    .Header p {
+        font-size: 14px;
+    }
+
+    .notice-card img {
+        height: 220px;
+    }
+
+    .notice-card h2 {
+        font-size: 18px;
+        margin: 16px 16px 8px;
+    }
+
+    .notice-card p {
+        margin: 0 16px 20px;
+        font-size: 14px;
+    }
+}

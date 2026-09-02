@@ -32,7 +32,7 @@ function NavBar(){
     <li><Link to="/about">हाम्रो बारेमा</Link></li>
     <li><Link to="/Employee">कर्मचारी</Link></li>
     <li><Link to="/Activedoctor">चिकित्सक</Link></li>
-    <li><Link to="/notice">सूचना</Link></li>
+    <li><Link to="/Notice">सूचना</Link></li>
     <li><Link to="/news">समाचार</Link></li>
     <li><Link to="/events">कार्यक्रम</Link></li>
     <li><Link to="/location">स्थानहरू</Link></li>
@@ -72,7 +72,7 @@ function NavBar(){
             <li><Link to="/about">About-Us</Link></li>
             <li><Link to="/Employee">Staff</Link></li>
             <li><Link to="/Activedoctor">Physician</Link></li>
-            <li><Link to="">Information</Link></li>
+            <li><Link to="/Notice">Information</Link></li>
             <li><Link to="">News</Link></li>
             <li><Link to="">Program</Link></li>
             <li><Link to="">Location</Link></li>
