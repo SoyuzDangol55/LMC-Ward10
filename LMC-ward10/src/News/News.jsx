@@ -1,7 +1,7 @@
 import Navbar from "../Component/Navbar/NavBar";
 import { getNews } from "../Services/api";
 import { useState, useEffect } from "react";
-import "./News.css";
+import styles from "./News.module.css";
 
 const IMAGE_BASE_URL = "https://ward10admin.lmc.gov.np/api/uploads/";
 
@@ -28,17 +28,17 @@ function News() {
 
   if (loading) {
     content = (
-      <div className="loading-wrapper">
-        <div className="spinner"></div>
+      <div className={styles["loading-wrapper"]}>
+        <div className={styles.spinner}></div>
       </div>
     );
   } else if (freshnews.length === 0) {
-    content = <p className="empty-state">कुनै समाचार फेला परेन।</p>;
+    content = <p className={styles["empty-state"]}>कुनै समाचार फेला परेन।</p>;
   } else {
     content = (
-      <div className="cards">
+      <div className={styles.cards}>
         {freshnews.map((news) => (
-          <div className="news-card" key={news.id}>
+          <div className={styles["news-card"]} key={news.id}>
             {news.galleries?.[0]?.fileName && (
               <img
                 src={`${IMAGE_BASE_URL}${news.galleries[0].fileName}`}
@@ -47,10 +47,10 @@ function News() {
               />
             )}
 
-            <div className="news-content">
+            <div className={styles["news-content"]}>
               <h2>{news.title}</h2>
               {news.createdAt && (
-                <span className="news-date">
+                <span className={styles["news-date"]}>
                   {new Date(news.createdAt).toLocaleDateString("ne-NP")}
                 </span>
               )}
@@ -65,7 +65,7 @@ function News() {
     <>
       <Navbar />
 
-      <div className="top-section">
+      <div className={styles["top-section"]}>
         <p>समाचार</p>
         <h1>ताजा समाचारहरू</h1>
         <h4>
